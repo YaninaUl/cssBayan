@@ -15,10 +15,21 @@
   display: block;
   margin: 0 auto;
 }
-
-.bayan i {
-  position: relative;
-  right: -10px;
+.bayan input:checked ~ label i.minus-icon {
+  display: input;
+  position: fixed;
+  right: 70px;
+}
+.bayan input:checked ~ label i.plus-icon {
+  display: none;
+}
+.bayan input:not(:checked) ~ label i.plus-icon {
+  display: input;
+  position: fixed;
+  right: 70px;
+}
+.bayan input:not(:checked) ~ label i.minus-icon {
+  display: none;
 }
 
 .bayan .list-item {
@@ -27,6 +38,7 @@
 .bayan label:hover {
   cursor: pointer;
 }
+
 .bayan label {
   display: block;
   width: 100%;
