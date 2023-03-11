@@ -1,23 +1,40 @@
-img {
-  display: block;
-  margin: 0 auto;
-}
-
-input:checked > img {
-  visibility: collapse;
-}
-
-.section {
+.bayan {
   background-color: #f6f6ec;
   margin-left: 30px;
   margin-right: 30px;
 }
-.list-item {
+.bayan input[type="checkbox"] {
+  display: none;
+}
+
+.bayan img {
+  display: none;
+}
+
+.bayan input:checked ~ img {
+  display: block;
+  margin: 0 auto;
+}
+
+.bayan i {
+  position: relative;
+  right: -10px;
+}
+
+.bayan .list-item {
   margin: 20px;
 }
-.list-item:hover {
+.bayan label:hover {
   cursor: pointer;
 }
-input[type="checkbox"]:not(:checked) > img {
-  visibility: collapse;
+.bayan label {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+}
+@media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
+}
+@media only screen and (max-width: 1920px) and (min-width: 1080px) {
 }
