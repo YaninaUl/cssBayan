@@ -15,7 +15,7 @@ body {
   display: none;
 }
 .bayan .list-item {
-  margin: 20px;
+  padding: 10px;
 }
 .bayan div.list-item,
 label:hover {
@@ -66,25 +66,19 @@ label:hover {
 }
 
 .bayan img {
-  visibility: hidden;
+  display: block;
+  margin: 0 auto;
   height: 0;
-  padding-top: 5%;
-  padding-bottom: 2%;
+  opacity: 0;
+  transition: opacity 1s;
 }
-.bayan input:checked ~ label img {
-  visibility: visible;
-  height: 100%;
-  width: 40%;
-  display: block;
-  margin: 0 auto;
-}
+.bayan input:checked ~ label img,
 .bayan .list-item:hover label img {
-  visibility: visible;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-  transition: height 1s;
+  height: auto;
+  opacity: 1;
   width: 40%;
+  padding-top: 3%;
+  padding-bottom: 2%;
 }
 
 @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
@@ -99,7 +93,7 @@ label:hover {
     width: 100%;
   }
   #img {
-    width: 200px;
+    width: 100%;
   }
 }
 @media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
@@ -115,7 +109,7 @@ label:hover {
     width: 80%;
   }
   #img {
-    width: 300px;
+    width: 70%;
   }
 }
 @media only screen and (max-width: 1920px) and (min-width: 1080px) {
