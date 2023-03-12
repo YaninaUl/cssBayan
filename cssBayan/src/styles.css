@@ -66,17 +66,22 @@ label:hover {
 }
 
 .bayan img {
-  display: none;
+  visibility: hidden;
+  height: 0;
 }
 .bayan input:checked ~ img {
-  display: block;
-  margin: 0 auto;
+  visibility: visible;
+  height: auto;
   width: 30%;
-}
-.bayan input:hover ~ img {
   display: block;
   margin: 0 auto;
-  transition: all 5s linear;
+}
+.bayan .list-item:hover input ~ img {
+  visibility: visible;
+  height: 200px;
+  display: block;
+  margin: 0 auto;
+  transition: height 0.3s;
   width: 30%;
 }
 
