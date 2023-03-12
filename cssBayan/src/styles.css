@@ -14,7 +14,6 @@ body {
 .bayan input[type="radio"] {
   display: none;
 }
-
 .bayan .list-item {
   margin: 20px;
 }
@@ -24,6 +23,9 @@ label:hover {
 }
 .bayan div.list-item:hover {
   color: black;
+}
+.bayan .label-row {
+  float: left;
 }
 
 .bayan label {
@@ -45,23 +47,19 @@ label:hover {
 }
 .bayan:hover div > label i {
   display: inline;
-  position: absolute;
-  right: 25%;
   transition: color 0.1s ease-in-out;
 }
 
 .bayan input:checked ~ label i.minus-icon {
   display: input;
-  position: absolute;
-  right: 25%;
+  float: right;
 }
 .bayan input:checked ~ label i.plus-icon {
   display: none;
 }
 .bayan input:not(:checked) ~ label i.plus-icon {
   display: input;
-  position: absolute;
-  right: 25%;
+  float: right;
 }
 .bayan input:not(:checked) ~ label i.minus-icon {
   display: none;
@@ -76,17 +74,17 @@ label:hover {
 .bayan input:checked ~ label img {
   visibility: visible;
   height: 100%;
-  width: 30%;
+  width: 40%;
   display: block;
   margin: 0 auto;
 }
 .bayan .list-item:hover label img {
   visibility: visible;
-  height: auto;
+  height: 100%;
   display: block;
   margin: 0 auto;
-  transition: height 1s ease-in-out;
-  width: 30%;
+  transition: height 1s;
+  width: 40%;
 }
 
 @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
@@ -99,16 +97,6 @@ label:hover {
   .bayan {
     margin: 0px;
     width: 100%;
-  }
-  .bayan input:checked ~ label i.minus-icon {
-    display: input;
-    position: absolute;
-    right: 10%;
-  }
-  .bayan input:not(:checked) ~ label i.plus-icon {
-    display: input;
-    position: absolute;
-    right: 10%;
   }
   #img {
     width: 200px;
@@ -129,16 +117,6 @@ label:hover {
   #img {
     width: 300px;
   }
-  .bayan input:checked ~ label i.minus-icon {
-    display: input;
-    position: absolute;
-    right: 10%;
-  }
-  .bayan input:not(:checked) ~ label i.plus-icon {
-    display: input;
-    position: absolute;
-    right: 10%;
-  }
 }
 @media only screen and (max-width: 1920px) and (min-width: 1080px) {
   h1 {
@@ -147,4 +125,8 @@ label:hover {
   label {
     font-size: 20px;
   }
+}
+
+.clearfix {
+  clear: both;
 }
