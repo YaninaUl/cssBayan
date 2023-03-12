@@ -17,13 +17,7 @@ body {
 .bayan .list-item {
   padding: 10px;
 }
-.bayan div.list-item,
-label:hover {
-  cursor: pointer;
-}
-.bayan div.list-item:hover {
-  color: black;
-}
+
 .bayan .label-row {
   float: left;
 }
@@ -34,20 +28,13 @@ label:hover {
   color: blue;
   font-weight: 500;
 }
-.bayan:hover div > label {
-  color: black;
-  transition: color 0.1s ease-in-out;
-}
+
 .bayan input:checked + label {
   color: black;
 }
 
 .bayan label > i {
   display: none;
-}
-.bayan:hover div > label i {
-  display: inline;
-  transition: color 0.1s ease-in-out;
 }
 
 .bayan input:checked ~ label i.minus-icon {
@@ -72,15 +59,37 @@ label:hover {
   opacity: 0;
   transition: opacity 1s;
 }
-.bayan input:checked ~ label img,
-.bayan .list-item:hover label img {
+.bayan input:checked ~ label img {
   height: auto;
   opacity: 1;
   width: 40%;
   padding-top: 3%;
   padding-bottom: 2%;
 }
-
+@media (hover: hover) {
+  .bayan div.list-item,
+  label:hover {
+    cursor: pointer;
+  }
+  .bayan div.list-item:hover {
+    color: black;
+  }
+  .bayan .list-item:hover label img {
+    height: auto;
+    opacity: 1;
+    width: 40%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+  .bayan:hover div > label {
+    color: black;
+    transition: color 0.1s ease-in-out;
+  }
+  .bayan:hover div > label i {
+    display: inline;
+    transition: color 0.1s ease-in-out;
+  }
+}
 @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
   .bayan h1 {
     font-size: 30px;
