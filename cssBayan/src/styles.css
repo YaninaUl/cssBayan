@@ -32,7 +32,7 @@ label:hover {
 }
 .bayan:hover div > label {
   color: black;
-  transition: all 0.5s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 .bayan input:checked + label {
   color: black;
@@ -45,7 +45,7 @@ label:hover {
   display: inline;
   position: absolute;
   right: 25%;
-  transition: all 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 .bayan input:checked ~ label i.minus-icon {
@@ -69,19 +69,19 @@ label:hover {
   visibility: hidden;
   height: 0;
 }
-.bayan input:checked ~ img {
+.bayan input:checked ~ label img {
   visibility: visible;
-  height: auto;
+  height: 100%;
   width: 30%;
   display: block;
   margin: 0 auto;
 }
-.bayan .list-item:hover input ~ img {
+.bayan .list-item:hover > label img {
   visibility: visible;
-  height: 200px;
+  height: auto;
   display: block;
   margin: 0 auto;
-  transition: height 0.3s;
+  transition: height 1s ease-in-out;
   width: 30%;
 }
 
