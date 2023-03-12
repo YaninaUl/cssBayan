@@ -1,6 +1,8 @@
+body {
+  background-color: #f6f6ec;
+}
 .bayan {
   display: block;
-  background-color: #f6f6ec;
   margin-left: 20%;
   margin-right: 20%;
   cursor: pointer;
@@ -68,6 +70,8 @@ label:hover {
 .bayan img {
   visibility: hidden;
   height: 0;
+  padding-top: 5%;
+  padding-bottom: 2%;
 }
 .bayan input:checked ~ label img {
   visibility: visible;
@@ -76,7 +80,7 @@ label:hover {
   display: block;
   margin: 0 auto;
 }
-.bayan .list-item:hover > label img {
+.bayan .list-item:hover label img {
   visibility: visible;
   height: auto;
   display: block;
@@ -106,13 +110,34 @@ label:hover {
     position: absolute;
     right: 10%;
   }
+  #img {
+    width: 200px;
+  }
 }
 @media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
   .bayan h1 {
-    font-size: 25px;
+    font-size: 35px;
   }
   .bayan label {
-    font-size: 20px;
+    font-size: 30px;
+  }
+  .bayan {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  #img {
+    width: 300px;
+  }
+  .bayan input:checked ~ label i.minus-icon {
+    display: input;
+    position: absolute;
+    right: 10%;
+  }
+  .bayan input:not(:checked) ~ label i.plus-icon {
+    display: input;
+    position: absolute;
+    right: 10%;
   }
 }
 @media only screen and (max-width: 1920px) and (min-width: 1080px) {
