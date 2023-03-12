@@ -1,9 +1,11 @@
 .bayan {
+  display: block;
   background-color: #f6f6ec;
   margin-left: 20%;
   margin-right: 20%;
+  cursor: pointer;
 }
-h1 {
+.bayan h1 {
   padding-top: 20px;
   text-align: center;
 }
@@ -11,15 +13,41 @@ h1 {
   display: none;
 }
 
-.bayan img {
-  display: none;
+.bayan .list-item {
+  margin: 20px;
+}
+.bayan div.list-item,
+label:hover {
+  cursor: pointer;
+}
+.bayan div.list-item:hover {
+  color: black;
 }
 
-.bayan input:checked ~ img {
+.bayan label {
   display: block;
-  margin: 0 auto;
-  width: 30%;
+  width: 100%;
+  color: blue;
+  font-weight: 500;
 }
+.bayan:hover div > label {
+  color: black;
+  transition: all 0.5s ease-in-out;
+}
+.bayan input:checked + label {
+  color: black;
+}
+
+.bayan label > i {
+  display: none;
+}
+.bayan:hover div > label i {
+  display: inline;
+  position: fixed;
+  right: 25%;
+  transition: all 0.1s ease-in-out;
+}
+
 .bayan input:checked ~ label i.minus-icon {
   display: input;
   position: fixed;
@@ -37,25 +65,30 @@ h1 {
   display: none;
 }
 
-.bayan .list-item {
-  margin: 20px;
+.bayan img {
+  display: none;
 }
-.bayan div.list-item,
-label:hover {
-  cursor: pointer;
-}
-
-.bayan label {
+.bayan input:checked ~ img {
   display: block;
-  width: 100%;
+  margin: 0 auto;
+  width: 30%;
+}
+.bayan input:hover ~ img {
+  display: block;
+  margin: 0 auto;
+  transition: all 5s ease-in-out;
+  width: 30%;
 }
 
 @media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
-  h1 {
-    font-size: 17px;
+  .bayan h1 {
+    font-size: 30px;
   }
-  label {
-    font-size: 13px;
+  .bayan label {
+    font-size: 20px;
+  }
+  .bayan img {
+    width: 40%;
   }
   .bayan {
     margin: 0px;
@@ -63,11 +96,11 @@ label:hover {
   }
 }
 @media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
-  h1 {
-    font-size: 24px;
+  .bayan h1 {
+    font-size: 25px;
   }
-  label {
-    font-size: 18px;
+  .bayan label {
+    font-size: 20px;
   }
 }
 @media only screen and (max-width: 1920px) and (min-width: 1080px) {
@@ -75,6 +108,6 @@ label:hover {
     font-size: 30px;
   }
   label {
-    font-size: 26px;
+    font-size: 20px;
   }
 }
