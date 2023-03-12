@@ -9,7 +9,7 @@
   padding-top: 20px;
   text-align: center;
 }
-.bayan input[type="checkbox"] {
+.bayan input[type="radio"] {
   display: none;
 }
 
@@ -76,7 +76,7 @@ label:hover {
 .bayan input:hover ~ img {
   display: block;
   margin: 0 auto;
-  transition: all 5s ease-in-out;
+  transition: all 5s linear;
   width: 30%;
 }
 
