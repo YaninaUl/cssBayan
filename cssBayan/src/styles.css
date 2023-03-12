@@ -43,14 +43,14 @@ label:hover {
 }
 .bayan:hover div > label i {
   display: inline;
-  position: fixed;
+  position: absolute;
   right: 25%;
   transition: all 0.1s ease-in-out;
 }
 
 .bayan input:checked ~ label i.minus-icon {
   display: input;
-  position: fixed;
+  position: absolute;
   right: 25%;
 }
 .bayan input:checked ~ label i.plus-icon {
@@ -58,7 +58,7 @@ label:hover {
 }
 .bayan input:not(:checked) ~ label i.plus-icon {
   display: input;
-  position: fixed;
+  position: absolute;
   right: 25%;
 }
 .bayan input:not(:checked) ~ label i.minus-icon {
@@ -87,12 +87,19 @@ label:hover {
   .bayan label {
     font-size: 20px;
   }
-  .bayan img {
-    width: 40%;
-  }
   .bayan {
     margin: 0px;
     width: 100%;
+  }
+  .bayan input:checked ~ label i.minus-icon {
+    display: input;
+    position: absolute;
+    right: 10%;
+  }
+  .bayan input:not(:checked) ~ label i.plus-icon {
+    display: input;
+    position: absolute;
+    right: 10%;
   }
 }
 @media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
