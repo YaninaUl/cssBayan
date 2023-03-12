@@ -1,0 +1,135 @@
+body {
+  background-color: #f6f6ec;
+}
+.bayan {
+  display: block;
+  margin-left: 20%;
+  margin-right: 20%;
+  cursor: pointer;
+}
+.bayan h1 {
+  padding-top: 20px;
+  text-align: center;
+}
+.bayan input[type="radio"] {
+  display: none;
+}
+.bayan .list-item {
+  padding: 10px;
+}
+
+.bayan .label-row {
+  float: left;
+}
+
+.bayan label {
+  display: block;
+  width: 100%;
+  color: blue;
+  font-weight: 500;
+}
+
+.bayan input:checked + label {
+  color: black;
+}
+
+.bayan label > i {
+  display: none;
+}
+
+.bayan input:checked ~ label i.minus-icon {
+  display: input;
+  float: right;
+}
+.bayan input:checked ~ label i.plus-icon {
+  display: none;
+}
+.bayan input:not(:checked) ~ label i.plus-icon {
+  display: input;
+  float: right;
+}
+.bayan input:not(:checked) ~ label i.minus-icon {
+  display: none;
+}
+
+.bayan img {
+  display: block;
+  margin: 0 auto;
+  height: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.bayan input:checked ~ label img {
+  height: auto;
+  opacity: 1;
+  width: 40%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+@media (hover: hover) {
+  .bayan div.list-item,
+  label:hover {
+    cursor: pointer;
+  }
+  .bayan div.list-item:hover {
+    color: black;
+  }
+  .bayan .list-item:hover label img {
+    height: auto;
+    opacity: 1;
+    width: 40%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+  }
+  .bayan:hover div > label {
+    color: black;
+    transition: color 0.1s ease-in-out;
+  }
+  .bayan:hover div > label i {
+    display: inline;
+    transition: color 0.1s ease-in-out;
+  }
+}
+@media only screen and (max-device-width: 568px) and (min-device-width: 320px) {
+  .bayan h1 {
+    font-size: 30px;
+  }
+  .bayan label {
+    font-size: 20px;
+  }
+  .bayan {
+    margin: 0px;
+    width: 100%;
+  }
+  #img {
+    width: 100%;
+  }
+}
+@media only screen and (max-device-width: 1180px) and (min-device-width: 820px) {
+  .bayan h1 {
+    font-size: 35px;
+  }
+  .bayan label {
+    font-size: 30px;
+  }
+  .bayan {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  #img {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 1920px) and (min-width: 1080px) {
+  h1 {
+    font-size: 30px;
+  }
+  label {
+    font-size: 23px;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
